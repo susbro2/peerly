@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse and enroll in top peer-to-peer learning courses on Peerly. Find advanced calculus, statistics, physics, and more.">
+    <title>Courses - Peerly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo"><a href="index.html">Peerly</a></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#subjects">Subjects</a></li>
+                    <li><a href="index.html#tutors">Find Tutors</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="courses-page">
+        <div class="courses-header">
+            <h1>Browse Courses</h1>
+            <form class="search-bar" role="search" aria-label="Search courses">
+                <label for="course-search" class="visually-hidden">Search courses</label>
+                <input type="text" id="course-search" placeholder="Search courses...">
+                <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="courses-grid">
+            <div class="course-card">
+                <img src="https://i.imgur.com/placeholder6.jpg" alt="Advanced Calculus Course Cover" loading="lazy">
+                <div class="course-info">
+                    <h3>Advanced Calculus</h3>
+                    <p>Dive deep into calculus concepts with real-world applications.</p>
+                    <a href="course-details.html" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="https://i.imgur.com/placeholder7.jpg" alt="Statistics Fundamentals Course Cover" loading="lazy">
+                <div class="course-info">
+                    <h3>Statistics Fundamentals</h3>
+                    <p>Master the basics of statistics and data analysis.</p>
+                    <a href="course-details.html" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="https://i.imgur.com/placeholder8.jpg" alt="Physics for Beginners Course Cover" loading="lazy">
+                <div class="course-info">
+                    <h3>Physics for Beginners</h3>
+                    <p>Understand the core principles of physics in an easy way.</p>
+                    <a href="course-details.html" class="view-details">View Details</a>
+                </div>
+            </div>
+            <!-- Add more course cards as needed -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Peerly</h3>
+                    <p>Connecting students with peer tutors for better learning outcomes</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#subjects">Subjects</a></li>
+                        <li><a href="#tutors">Find Tutors</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Peerly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Accessibility: visually hidden class for labels
+    (function(){
+      var style = document.createElement('style');
+      style.innerHTML = '.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }';
+      document.head.appendChild(style);
+    })();
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+    </script>
+    <script src="components/js/user-activity-monitor.js"></script>
+</body>
+</html> 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - Peerly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo"><a href="index.html">Peerly</a></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#subjects">Subjects</a></li>
+                    <li><a href="index.html#tutors">Find Tutors</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="course-details-page">
+        <div class="course-header">
+            <img src="https://i.imgur.com/placeholder6.jpg" alt="Course" class="course-image">
+            <div class="course-info">
+                <h1>Advanced Calculus</h1>
+                <p>Dive deep into calculus concepts with real-world applications. This course covers limits, derivatives, integrals, and more, with interactive lectures and practice problems.</p>
+                <button class="enroll-btn">Enroll Now</button>
+            </div>
+        </div>
+        <div class="lectures-list">
+            <h2>Lectures</h2>
+            <ul>
+                <li><a href="video-lecture.html">Introduction to Functions</a></li>
+                <li><a href="video-lecture.html">Graphs and Transformations</a></li>
+                <li><a href="video-lecture.html">Limits and Continuity</a></li>
+                <li><a href="video-lecture.html">Derivatives: Definition</a></li>
+                <li><a href="video-lecture.html">Derivative Rules</a></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Peerly</h3>
+                    <p>Connecting students with peer tutors for better learning outcomes</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#subjects">Subjects</a></li>
+                        <li><a href="#tutors">Find Tutors</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Peerly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+    </script>
+    <script src="components/js/user-activity-monitor.js"></script>
+</body>
+</html> 

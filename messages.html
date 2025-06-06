@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Peerly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo"><a href="index.html">Peerly</a></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#subjects">Subjects</a></li>
+                    <li><a href="index.html#tutors">Find Tutors</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="messages-page">
+        <div class="messages-container">
+            <aside class="conversations-sidebar">
+                <h2>Conversations</h2>
+                <ul class="conversations-list">
+                    <li class="active"><img src="https://i.imgur.com/placeholder2.jpg" alt="User"> Sarah Johnson</li>
+                    <li><img src="https://i.imgur.com/placeholder4.jpg" alt="User"> Michael Chen</li>
+                    <li><img src="https://i.imgur.com/placeholder5.jpg" alt="User"> Emily Rodriguez</li>
+                </ul>
+            </aside>
+            <section class="chat-area">
+                <div class="chat-header">
+                    <img src="https://i.imgur.com/placeholder2.jpg" alt="User">
+                    <span>Sarah Johnson</span>
+                </div>
+                <div class="chat-messages">
+                    <div class="message received">
+                        <p>Hi! Are you ready for the next session?</p>
+                        <span class="message-time">10:01 AM</span>
+                    </div>
+                    <div class="message sent">
+                        <p>Yes, looking forward to it!</p>
+                        <span class="message-time">10:02 AM</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type a message...">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Peerly</h3>
+                    <p>Connecting students with peer tutors for better learning outcomes</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#subjects">Subjects</a></li>
+                        <li><a href="#tutors">Find Tutors</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Peerly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+    </script>
+    <script src="components/js/user-activity-monitor.js"></script>
+</body>
+</html> 

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Peerly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="/">
+                    <img src="/assets/images/logo.png" alt="Peerly Logo">
+                </a>
+            </div>
+            
+            <div class="auth-container">
+                <div class="social-login">
+                    <button id="google-login" class="social-button google">
+                        <i class="fab fa-google"></i>
+                        Continue with Google
+                    </button>
+                    <button id="github-login" class="social-button github">
+                        <i class="fab fa-github"></i>
+                        Continue with GitHub
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-container">
+                <img src="/assets/images/default-avatar.png" alt="User Avatar" class="user-avatar">
+                <span class="user-name">Guest User</span>
+                <button class="logout-button" onclick="auth.logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-page">
+        <div class="dashboard-grid">
+            <aside class="dashboard-sidebar">
+                <nav class="dashboard-nav">
+                    <ul>
+                        <li class="active"><a href="#overview"><i class="fas fa-home"></i> Overview</a></li>
+                        <li><a href="whiteboard.html"><i class="fas fa-chalkboard"></i> Whiteboard</a></li>
+                        <li><a href="book-session.html"><i class="fas fa-calendar-plus"></i> Book Session</a></li>
+                        <li><a href="resource-library.html"><i class="fas fa-folder-open"></i> Resources</a></li>
+                        <li><a href="quizzes.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+                        <li><a href="leaderboard.html"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+                        <li><a href="forum.html"><i class="fas fa-comments"></i> Forum</a></li>
+                        <li><a href="feedback.html"><i class="fas fa-star"></i> Feedback</a></li>
+                        <li><a href="tutor-profile.html"><i class="fas fa-user-graduate"></i> Tutor Profile</a></li>
+                        
+                        <!-- Social Features -->
+                        <li><a href="feed.html"><i class="fas fa-stream"></i> Feed</a></li>
+                        <li><a href="stories.html"><i class="fas fa-circle"></i> Stories</a></li>
+                        <li><a href="explore.html"><i class="fas fa-compass"></i> Explore</a></li>
+                        <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+                        <li><a href="followers.html"><i class="fas fa-users"></i> Followers</a></li>
+                        <li><a href="live.html"><i class="fas fa-video"></i> Live Events</a></li>
+                        
+                        <li><a href="#sessions"><i class="fas fa-calendar"></i> My Sessions</a></li>
+                        <li><a href="#progress"><i class="fas fa-chart-line"></i> Learning Progress</a></li>
+                        <li><a href="#messages"><i class="fas fa-envelope"></i> Messages</a></li>
+                        <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="dashboard-content">
+                <section class="dashboard-overview">
+                    <h1>Welcome back, John!</h1>
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <i class="fas fa-book"></i>
+                            <div class="stat-info">
+                                <h3>Active Courses</h3>
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-clock"></i>
+                            <div class="stat-info">
+                                <h3>Hours Learned</h3>
+                                <p>24.5</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-star"></i>
+                            <div class="stat-info">
+                                <h3>Achievement Points</h3>
+                                <p>850</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upcoming-sessions">
+                        <h2>Upcoming Sessions</h2>
+                        <div class="session-cards">
+                            <div class="session-card">
+                                <div class="session-time">
+                                    <span class="date">Today</span>
+                                    <span class="time">2:00 PM</span>
+                                </div>
+                                <div class="session-info">
+                                    <h3>Mathematics - Calculus</h3>
+                                    <p>with Sarah Johnson</p>
+                                </div>
+                                <button class="join-session-btn">Join Session</button>
+                            </div>
+                            <!-- More session cards -->
+                        </div>
+                    </div>
+
+                    <div class="learning-progress">
+                        <h2>Learning Progress</h2>
+                        <div class="progress-cards">
+                            <div class="progress-card">
+                                <h3>Mathematics</h3>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <p>75% Complete</p>
+                            </div>
+                            <div class="progress-card">
+                                <h3>Physics</h3>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 45%"></div>
+                                </div>
+                                <p>45% Complete</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-activity">
+                        <h2>Recent Activity</h2>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div class="activity-info">
+                                    <p>Completed Calculus Quiz</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-video"></i>
+                                <div class="activity-info">
+                                    <p>Attended Physics Session</p>
+                                    <span class="activity-time">Yesterday</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-star"></i>
+                                <div class="activity-info">
+                                    <p>Earned "Quick Learner" Badge</p>
+                                    <span class="activity-time">2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Peerly</h3>
+                    <p>Connecting students with peer tutors for better learning outcomes</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#subjects">Subjects</a></li>
+                        <li><a href="#tutors">Find Tutors</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Peerly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+    </script>
+    <script src="components/js/user-activity-monitor.js"></script>
+</body>
+</html> 

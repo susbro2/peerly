@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lecture - Peerly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Peerly</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#subjects">Subjects</a></li>
+                <li><a href="index.html#tutors">Find Tutors</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="user-profile">
+                <img src="https://i.imgur.com/placeholder2.jpg" alt="User Profile" class="profile-pic">
+                <span class="username">John Doe</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="video-lecture-page">
+        <div id="tutor-upload-container"></div>
+        <div class="video-container">
+            <div class="video-player">
+                <video id="lecture-video" controls poster="https://i.imgur.com/placeholder3.jpg">
+                    <source src="https://example.com/video-lecture.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-controls">
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="play-pause"><i class="fas fa-play"></i></button>
+                        <div class="time-display">0:00 / 45:30</div>
+                        <button class="volume"><i class="fas fa-volume-up"></i></button>
+                        <button class="fullscreen"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-info">
+                <h1>Introduction to Calculus: Limits and Continuity</h1>
+                <div class="video-meta">
+                    <span><i class="fas fa-user"></i> Sarah Johnson</span>
+                    <span><i class="fas fa-calendar"></i> May 15, 2024</span>
+                    <span><i class="fas fa-clock"></i> 45 minutes</span>
+                </div>
+                <div class="video-actions">
+                    <button class="action-btn"><i class="fas fa-download"></i> Download</button>
+                    <button class="action-btn"><i class="fas fa-share"></i> Share</button>
+                    <button class="action-btn"><i class="fas fa-bookmark"></i> Save</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="lecture-content">
+            <div class="content-grid">
+                <div class="main-content">
+                    <section class="lecture-description">
+                        <h2>Lecture Description</h2>
+                        <p>In this lecture, we'll explore the fundamental concepts of limits and continuity in calculus. You'll learn how to evaluate limits algebraically and graphically, understand the definition of continuity, and apply these concepts to solve real-world problems.</p>
+                        
+                        <div class="learning-objectives">
+                            <h3>Learning Objectives</h3>
+                            <ul>
+                                <li>Understand the concept of a limit and its notation</li>
+                                <li>Evaluate limits using algebraic techniques</li>
+                                <li>Identify points of discontinuity in functions</li>
+                                <li>Apply the Intermediate Value Theorem</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="lecture-resources">
+                        <h2>Additional Resources</h2>
+                        <div class="resources-list">
+                            <div class="resource-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <div class="resource-info">
+                                    <h3>Lecture Notes</h3>
+                                    <p>PDF notes covering the key concepts discussed in this lecture</p>
+                                    <a href="#" class="resource-link">Download PDF</a>
+                                </div>
+                            </div>
+                            <div class="resource-item">
+                                <i class="fas fa-tasks"></i>
+                                <div class="resource-info">
+                                    <h3>Practice Problems</h3>
+                                    <p>Test your understanding with these practice problems</p>
+                                    <a href="#" class="resource-link">View Problems</a>
+                                </div>
+                            </div>
+                            <div class="resource-item">
+                                <i class="fas fa-link"></i>
+                                <div class="resource-info">
+                                    <h3>External Resources</h3>
+                                    <p>Additional reading materials and videos for further study</p>
+                                    <a href="#" class="resource-link">View Resources</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="lecture-comments">
+                        <h2>Discussion</h2>
+                        <div class="comment-form">
+                            <textarea placeholder="Add a comment..."></textarea>
+                            <button class="submit-comment">Post</button>
+                        </div>
+                        <div class="comments-list">
+                            <div class="comment">
+                                <img src="https://i.imgur.com/placeholder4.jpg" alt="User" class="comment-avatar">
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <h4>Michael Chen</h4>
+                                        <span class="comment-time">2 days ago</span>
+                                    </div>
+                                    <p>Great explanation of the epsilon-delta definition! I finally understand it now.</p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img src="https://i.imgur.com/placeholder5.jpg" alt="User" class="comment-avatar">
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <h4>Emily Rodriguez</h4>
+                                        <span class="comment-time">1 week ago</span>
+                                    </div>
+                                    <p>Could you explain more about the difference between removable and non-removable discontinuities?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="lecture-sidebar">
+                    <section class="course-progress">
+                        <h3>Course Progress</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%"></div>
+                        </div>
+                        <p>65% Complete</p>
+                    </section>
+
+                    <section class="upcoming-lectures">
+                        <h3>Upcoming Lectures</h3>
+                        <div class="lecture-list">
+                            <div class="lecture-item completed">
+                                <div class="lecture-status"><i class="fas fa-check-circle"></i></div>
+                                <div class="lecture-details">
+                                    <h4>Introduction to Functions</h4>
+                                    <p>45 minutes</p>
+                                </div>
+                            </div>
+                            <div class="lecture-item completed">
+                                <div class="lecture-status"><i class="fas fa-check-circle"></i></div>
+                                <div class="lecture-details">
+                                    <h4>Graphs and Transformations</h4>
+                                    <p>50 minutes</p>
+                                </div>
+                            </div>
+                            <div class="lecture-item active">
+                                <div class="lecture-status"><i class="fas fa-play-circle"></i></div>
+                                <div class="lecture-details">
+                                    <h4>Limits and Continuity</h4>
+                                    <p>45 minutes</p>
+                                </div>
+                            </div>
+                            <div class="lecture-item">
+                                <div class="lecture-status"><i class="fas fa-lock"></i></div>
+                                <div class="lecture-details">
+                                    <h4>Derivatives: Definition</h4>
+                                    <p>60 minutes</p>
+                                </div>
+                            </div>
+                            <div class="lecture-item">
+                                <div class="lecture-status"><i class="fas fa-lock"></i></div>
+                                <div class="lecture-details">
+                                    <h4>Derivative Rules</h4>
+                                    <p>55 minutes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="related-courses">
+                        <h3>Related Courses</h3>
+                        <div class="course-list">
+                            <div class="course-item">
+                                <img src="https://i.imgur.com/placeholder6.jpg" alt="Course">
+                                <div class="course-details">
+                                    <h4>Advanced Calculus</h4>
+                                    <p>12 lectures</p>
+                                    <a href="#" class="view-course">View Course</a>
+                                </div>
+                            </div>
+                            <div class="course-item">
+                                <img src="https://i.imgur.com/placeholder7.jpg" alt="Course">
+                                <div class="course-details">
+                                    <h4>Statistics Fundamentals</h4>
+                                    <p>10 lectures</p>
+                                    <a href="#" class="view-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Peerly</h3>
+                    <p>Connecting students with peer tutors for better learning outcomes</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#subjects">Subjects</a></li>
+                        <li><a href="#tutors">Find Tutors</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Peerly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+    </script>
+    <script src="components/js/user-activity-monitor.js"></script>
+    <script>
+    // Simulate tutor role (replace with real role check in production)
+    var isTutor = false;
+    if (window.auth && auth.currentUser && auth.currentUser.role === 'tutor') {
+        isTutor = true;
+    }
+    // For demo/testing, set to true:
+    isTutor = true;
+
+    if (isTutor) {
+        var uploadHTML = `
+        <section class="tutor-upload-section" style="margin-bottom:24px; background:#f8f9fa; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+            <h2 style="margin-top:0;">Upload Resource for Class</h2>
+            <form id="tutor-upload-form">
+                <label>Title<br><input type="text" name="title" required style="width:100%;margin-bottom:10px;"></label><br>
+                <label>Type<br>
+                    <select name="type" required style="width:100%;margin-bottom:10px;">
+                        <option value="video">Video</option>
+                        <option value="document">Document</option>
+                    </select>
+                </label><br>
+                <label>File<br><input type="file" name="file" accept=".mp4,.mov,.avi,.pdf,.doc,.docx,.ppt,.pptx" required style="width:100%;margin-bottom:10px;"></label><br>
+                <button type="submit" style="background:#3182ce;color:#fff;padding:8px 20px;border:none;border-radius:4px;cursor:pointer;">Upload</button>
+            </form>
+            <div id="upload-status" style="margin-top:10px;color:#3182ce;"></div>
+        </section>
+        `;
+        document.getElementById('tutor-upload-container').innerHTML = uploadHTML;
+        document.getElementById('tutor-upload-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = e.target;
+            var title = form.title.value;
+            var type = form.type.value;
+            var file = form.file.files[0];
+            if (!file) return;
+            document.getElementById('upload-status').textContent = 'Uploading...';
+            // Simulate upload
+            setTimeout(function() {
+                document.getElementById('upload-status').textContent = 'Upload successful! (Check console for file info)';
+                console.log('[Tutor Upload]', {title, type, file});
+            }, 1000);
+        });
+    }
+    </script>
+</body>
+</html> 
