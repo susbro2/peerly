@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizzes & Practice Tests - Peerly</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components/css/quiz-system.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="manifest" href="manifest.json">
 </head>
@@ -25,12 +26,11 @@
         </div>
     </header>
     <main class="quizzes-page">
-        <section class="quizzes-section" style="min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-            <h1>Quizzes & Practice Tests</h1>
-            <div class="quizzes-placeholder" style="width:90%;max-width:600px;height:350px;background:#f7f7f7;border:2px dashed #3182ce;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#3182ce;">
-                Coming Soon: Interactive quizzes and instant feedback!
+        <div class="quiz-container">
+            <div id="quiz-content">
+                <!-- Quiz content will be rendered here -->
             </div>
-        </section>
+        </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -64,6 +64,14 @@
             </div>
         </div>
     </footer>
+    <script src="components/js/quiz-system.js"></script>
+    <script>
+        let quiz;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            quiz = new QuizSystem('quiz-content');
+        });
+    </script>
     <script src="components/js/user-activity-monitor.js"></script>
 </body>
 </html> 

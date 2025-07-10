@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Whiteboard - Peerly</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components/css/whiteboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="manifest" href="manifest.json">
 </head>
@@ -24,12 +25,74 @@
         </div>
     </header>
     <main class="whiteboard-page">
-        <section class="whiteboard-section" style="min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-            <h1>Live Whiteboard</h1>
-            <div class="whiteboard-placeholder" style="width:90%;max-width:800px;height:350px;background:#f7f7f7;border:2px dashed #3182ce;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#3182ce;">
-                Coming Soon: Real-time collaborative whiteboard!
+        <div class="whiteboard-container">
+            <div class="whiteboard-header">
+                <h1 class="whiteboard-title">Live Whiteboard</h1>
+                <div class="whiteboard-tools">
+                    <div class="tool-group">
+                        <button class="tool-btn active" onclick="whiteboard.setTool('pen')" data-tool="pen">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="tool-btn" onclick="whiteboard.setTool('eraser')" data-tool="eraser">
+                            <i class="fas fa-eraser"></i>
+                        </button>
+                    </div>
+                    <div class="tool-group">
+                        <input type="color" class="color-picker" value="#000000" onchange="whiteboard.setColor(this.value)">
+                        <input type="range" class="size-slider" min="1" max="20" value="2" onchange="whiteboard.setSize(this.value)">
+                    </div>
+                    <div class="tool-group">
+                        <button class="tool-btn" onclick="whiteboard.undo()">
+                            <i class="fas fa-undo"></i>
+                        </button>
+                        <button class="tool-btn" onclick="whiteboard.redo()">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                        <button class="tool-btn" onclick="whiteboard.clear()">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        <button class="tool-btn" onclick="whiteboard.downloadImage()">
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </section>
+            
+            <div class="whiteboard-canvas-container">
+                <canvas id="whiteboard-canvas" width="1000" height="600"></canvas>
+                <div class="canvas-overlay">
+                    <button class="overlay-btn" onclick="toggleFullscreen()">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="participants-panel">
+                <div class="participants-header">
+                    <h3>Participants (3)</h3>
+                    <button class="tool-btn" onclick="inviteParticipants()">
+                        <i class="fas fa-user-plus"></i>
+                    </button>
+                </div>
+                <div class="participants-list">
+                    <div class="participant">
+                        <img src="https://i.imgur.com/placeholder1.jpg" alt="User" class="participant-avatar">
+                        <span>You</span>
+                        <div class="participant-status"></div>
+                    </div>
+                    <div class="participant">
+                        <img src="https://i.imgur.com/placeholder2.jpg" alt="User" class="participant-avatar">
+                        <span>Sarah Johnson</span>
+                        <div class="participant-status"></div>
+                    </div>
+                    <div class="participant">
+                        <img src="https://i.imgur.com/placeholder3.jpg" alt="User" class="participant-avatar">
+                        <span>Mike Chen</span>
+                        <div class="participant-status"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -62,6 +125,38 @@
             </div>
         </div>
     </footer>
+    <script src="components/js/whiteboard.js"></script>
+    <script>
+        let whiteboard;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            whiteboard = new Whiteboard('whiteboard-canvas');
+        });
+        
+        function toggleFullscreen() {
+            const container = document.querySelector('.whiteboard-canvas-container');
+            if (!document.fullscreenElement) {
+                container.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+        
+        function inviteParticipants() {
+            const email = prompt('Enter email address to invite:');
+            if (email) {
+                alert(`Invitation sent to ${email}!`);
+            }
+        }
+        
+        // Tool selection visual feedback
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('tool-btn') && e.target.dataset.tool) {
+                document.querySelectorAll('.tool-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+            }
+        });
+    </script>
     <script src="components/js/user-activity-monitor.js"></script>
 </body>
 </html> 

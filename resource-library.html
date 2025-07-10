@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resource Library - Peerly</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components/css/resource-library.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="manifest" href="manifest.json">
 </head>
@@ -24,12 +25,11 @@
         </div>
     </header>
     <main class="resource-library-page">
-        <section class="resource-library-section" style="min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-            <h1>Resource Library</h1>
-            <div class="resource-library-placeholder" style="width:90%;max-width:800px;height:350px;background:#f7f7f7;border:2px dashed #3182ce;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#3182ce;">
-                Coming Soon: Searchable, filterable resource library for all your learning needs!
+        <div class="resource-library-container">
+            <div id="resource-library-content">
+                <!-- Resource library content will be rendered here -->
             </div>
-        </section>
+        </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -62,6 +62,14 @@
             </div>
         </div>
     </footer>
+    <script src="components/js/resource-library.js"></script>
+    <script>
+        let resourceLibrary;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            resourceLibrary = new ResourceLibrary('resource-library-content');
+        });
+    </script>
     <script src="components/js/user-activity-monitor.js"></script>
 </body>
 </html> 

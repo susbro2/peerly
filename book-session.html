@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a Session - Peerly</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components/css/booking-calendar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="manifest" href="manifest.json">
 </head>
@@ -24,12 +25,12 @@
         </div>
     </header>
     <main class="book-session-page">
-        <section class="booking-section" style="min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-            <h1>Book a Session</h1>
-            <div class="booking-placeholder" style="width:90%;max-width:600px;height:350px;background:#f7f7f7;border:2px dashed #3182ce;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#3182ce;">
-                Coming Soon: Session booking calendar & Google Calendar integration!
+        <div class="booking-calendar-container">
+            <h1 style="text-align: center; color: var(--primary); margin-bottom: 2rem;">Book a Session</h1>
+            <div id="booking-calendar">
+                <!-- Calendar will be rendered here -->
             </div>
-        </section>
+        </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -62,6 +63,14 @@
             </div>
         </div>
     </footer>
+    <script src="components/js/booking-calendar.js"></script>
+    <script>
+        let calendar;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            calendar = new BookingCalendar('booking-calendar');
+        });
+    </script>
     <script src="components/js/user-activity-monitor.js"></script>
 </body>
 </html> 
